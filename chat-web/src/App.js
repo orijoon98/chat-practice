@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
-import MainPage from './pages/MainPage';
+import ChatPage from './pages/ChatPage';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -18,7 +18,7 @@ function App() {
         <>
             <GlobalStyle />
             <Routes>
-                <Route path="/main" element={<MainPage />} />
+                <Route path="/:chatId" element={<ChatPage />} />
             </Routes>
         </>
     );
